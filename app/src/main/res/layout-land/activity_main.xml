@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/history"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:maxLength="60"
+        android:textAlignment="textEnd"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:maxLength="23"
+        android:scrollHorizontally="true"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:textSize="26sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnMC"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_operations"
+            android:fontFamily="@font/droid_sans"
+            android:onClick="memoryClick"
+            android:text="@string/mc"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/btnMA"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_operations"
+            android:fontFamily="@font/droid_sans"
+            android:onClick="memoryClick"
+            android:text="@string/ma"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/btnMS"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_operations"
+            android:fontFamily="@font/droid_sans"
+            android:onClick="memoryClick"
+            android:text="@string/ms"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/btnMR"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_operations"
+            android:fontFamily="@font/droid_sans"
+            android:onClick="memoryClick"
+            android:text="@string/mr"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnC"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_operations"
+            android:fontFamily="@font/droid_sans"
+            android:onClick="deleteClick"
+            android:text="@string/clear"
+            android:textColor="@color/colorOperations"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/btnPercent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_operations"
+            android:fontFamily="sans-serif"
+            android:onClick="percentClick"
+            android:text="@string/percentage"
+            android:textColor="@color/colorOperations"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/btnDivide"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_operations"
+            android:fontFamily="sans-serif-light"
+            android:onClick="operationClick"
+            android:text="@string/divide"
+            android:textColor="@color/colorOperations"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_operations"
+            android:fontFamily="@font/droid_sans"
+            android:onClick="deleteClick"
+            android:text="@string/back"
+            android:textColor="@color/colorOperations"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_number"
+            android:fontFamily="@font/droid_sans"
+            android:onClick="numberClick"
+            android:text="@string/seven"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/btn8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_number"
+            android:fontFamily="@font/droid_sans"
+            android:onClick="numberClick"
+            android:text="8"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/btn9"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_number"
+            android:fontFamily="@font/droid_sans"
+            android:onClick="numberClick"
+            android:text="@string/nine"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/btnMulti"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_operations"
+            android:fontFamily="@font/droid_sans"
+            android:onClick="operationClick"
+            android:text="@string/multiply"
+            android:textColor="@color/colorOperations"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_number"
+            android:fontFamily="@font/droid_sans"
+            android:onClick="numberClick"
+            android:text="@string/four"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_number"
+            android:fontFamily="@font/droid_sans"
+            android:onClick="numberClick"
+            android:text="@string/five"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_number"
+            android:fontFamily="@font/droid_sans"
+            android:onClick="numberClick"
+            android:text="@string/six"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/btnMinus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_operations"
+            android:fontFamily="@font/droid_sans"
+            android:onClick="operationClick"
+            android:text="@string/minus"
+            android:textColor="@color/colorOperations"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_number"
+            android:fontFamily="@font/droid_sans"
+            android:onClick="numberClick"
+            android:text="@string/one"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_number"
+            android:fontFamily="@font/droid_sans"
+            android:onClick="numberClick"
+            android:text="@string/two"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_number"
+            android:fontFamily="@font/droid_sans"
+            android:onClick="numberClick"
+            android:text="@string/three"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/btnPlus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_operations"
+            android:fontFamily="@font/droid_sans"
+            android:onClick="operationClick"
+            android:text="@string/plus"
+            android:textColor="@color/colorOperations"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSign"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_number"
+            android:fontFamily="@font/droid_sans"
+            android:onClick="signClick"
+            android:text="@string/sign"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/btn0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_number"
+            android:fontFamily="@font/droid_sans"
+            android:onClick="numberClick"
+            android:text="@string/zero"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/btnDot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_number"
+            android:fontFamily="@font/droid_sans"
+            android:onClick="numberClick"
+            android:text="@string/dot"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/btnEqual"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_equal"
+            android:fontFamily="@font/droid_sans"
+            android:onClick="equalClick"
+            android:text="@string/equal"
+            android:textColor="@color/colorEqual"
+            android:textSize="26sp" />
+    </LinearLayout>
+</LinearLayout>
